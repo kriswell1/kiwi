@@ -6,7 +6,7 @@
 
     if ( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) ) {
 
-       header("Location:belepve.php");
+       //header("Location:belepve.php");
 
         $dbh = new PDO("mysql:host=localhost;dbname=$db_name", $db_name, $db_pass);
 
@@ -31,7 +31,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>header</header>
+    <header></header>
     <nav>
        
        <ul>
@@ -79,7 +79,8 @@
         <button>Elküld</button>
     </form>
     </main>
-    <footer>footer</footer>
-<?php ?>
+    
+</main>
+<footer> &copy KIWI 2023</footer>
 </body>
 </html>

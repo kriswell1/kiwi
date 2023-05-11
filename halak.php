@@ -14,7 +14,8 @@ $db_pass='DnjeWf5)cejJnK92';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script language="JavaScript" src="script.js" type="text/javascript"></script>
+    <title>Díszhalak</title>
 </head>
 <body>
     <header>
@@ -44,6 +45,23 @@ $db_pass='DnjeWf5)cejJnK92';
         <section>section2</section>
     </aside>
     <main id="halak">
+
+    <form action="" method="post">
+
+    <h1>Díszhalat rendelek</h1>
+    <label for="">Írja be a hal nevét</label>
+    <input type="text" id="txt1" onkeyup="showHint(this.value)"><br>
+     Javaslat:<span id="txtHint1"></span><br><br>
+     <label for="">Szállítási cím</label>
+     <input type="text" size="50" name="cim" id="cim"><br>
+
+     <label for="">Fizetendő:</label>
+     <span name="osszeg" id="osszeg"></span> Ft.
+     <br><br>
+
+    
+     <button>Elküld</button>
+    </form>
     
     <?php 
      $dbh = new PDO("mysql:host=localhost;dbname=$db_name", $db_name,$db_pass);
@@ -56,6 +74,8 @@ $db_pass='DnjeWf5)cejJnK92';
                              <span><?= $item['nev'] ?></span>   <span><?= $item['ar'] ?> FT</span>
                             </div>
                         <?php } ?>
+    
+    
 
    
         
@@ -65,7 +85,7 @@ $db_pass='DnjeWf5)cejJnK92';
     
     
     </main>
-    <footer>KIWI &copy</footer>
-<?php ?>
+    <footer> &copy KIWI 2023</footer>
+
 </body>
 </html>

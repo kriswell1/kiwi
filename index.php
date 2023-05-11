@@ -99,6 +99,6 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 </p>
     </main>
     <footer> &copy KIWI 2023</footer>
-<?php ?>
+
 </body>
 </html>

@@ -2,7 +2,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>header</header>
+    <header></header>
     <nav>
        
        <ul>
@@ -47,10 +46,12 @@
         <section>section2</section>
     </aside>
     <main>
+       
+         
+    <h2>Üdvözöljük!</h2>
     
-  
     </main>
-    <footer>footer</footer>
-<?php ?>
+    <footer> &copy KIWI 2023</footer>
+
 </body>
 </html>
