@@ -15,7 +15,7 @@ main{
     height:700px;
     overflow:auto;
     padding:20px;
-    background-image: url('kutya.png');
+    background-image: url('./images/kutya.png');
 }
 
 main p{

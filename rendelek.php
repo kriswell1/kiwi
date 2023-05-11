@@ -1,5 +1,26 @@
 
+<?php
 
+    $db_pass = 'DnjeWf5)cejJnK92';
+
+    $db_name = 'valami2';
+
+    if ( isset($_POST['cim']) && isset($_POST['osszeg']) ) {
+
+       
+
+        $dbh = new PDO("mysql:host=localhost;dbname=$db_name", $db_name, $db_pass);
+
+        $sql = "INSERT INTO rendeles (szalllitasicim, osszeg) 
+            VALUES 
+            ('{$_POST['cim']}', '{$_POST['osszeg']}')
+        ";
+
+        $dbh->query($sql); 
+        
+    }
+    
+?>
 
 
 
@@ -11,6 +32,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script language="JavaScript" src="script.js" type="text/javascript"></script>
+    
+    
+    
     <title>Document</title>
 </head>
 <body>
@@ -29,10 +53,10 @@
                 <a href="kutyak.php" target="blank">Kutyák</a>
             </li>
             <li>
-                <a href="macskak.php">Macskák</a>
+                <a href="macskak.php" target="blank">Macskák</a>
             </li>
             <li>
-                <a href="madarak.php">Madarak</a>
+                <a href="madarak.php" target="blank">Madarak</a>
             </li>
             <li>
                 <a href="">Rendelek</a>
@@ -48,38 +72,30 @@
         <section>section2</section>
     </aside>
     <main>
-
     <form action="" method="post">
-    
-    
-    
 
-     <h1>Madarat rendelek</h1>
-    <label for="">Írja be a madár nevét</label>
-    <input type="text" id="txt2"><br>
-     Javaslat:<span id="txtHint2"></span><br><br>
-
-     <h1>Kutyát rendelek</h1>
-    <label for="">Írja be a kutya nevét</label>
-    <input type="text" id="txt3" onkeyup="showHint(this.value)"><br>
-     Javaslat:<span id="txtHint3"></span><br><br>
+      
 
 
-     <h1>Macskát rendelek</h1>
-    <label for="">Írja be a macska nevét</label>
-    <input type="text" id="txt4"><br>
-     Javaslat:<span id="txtHint4"></span><br><br>
+        <h1>Rendelek</h1>
+        <label for="">Írja be az állat nevét</label>
+        <input type="text" id="txt1" onkeyup="showHint(this.value)"><br>
+        Javaslat:<span id="txtHint1"></span><br><br>
 
-     <label for="">Szállítási cím</label>
-     <input type="text" size="50" name="cim" id="cim"><br>
+        <label for="">Szállítási cím</label>
+        <input type="text" size="50" name="cim" id="cim" onclick="rendel()"><br>
 
-     <label for="">Fizetendő:</label>
-     <span name="osszeg" id="osszeg"></span> Ft.
-     <br><br>
+        <label for="">Fizetendő:</label>
+        <span name="osszeg" id="osszeg"></span> Ft.
+        <br><br>
+
+
+        <button>Elküld</button>
+    </form><br>
+
+
 
     
-     <button>Elküld</button>
-     </form>
 
     </main>
     <footer> &copy KIWI 2023</footer>

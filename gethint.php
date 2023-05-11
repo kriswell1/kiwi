@@ -1,5 +1,5 @@
 <?php
-$a=Array("Neonhal","Vitorláshal","Törpe gurámi","Ázsiai cápaharcsa","Szifó","Vöröshasú pirája","Diszkoszhal");
+$a=Array("Neonhal","Vitorláshal","Törpe gurámi","Ázsiai cápaharcsa","Szifó","Vöröshasú pirája","Diszkoszhal","Papagáj","Amandina","Zebrapinty","Beó","Hácsi","Breki","Pufi","Flipper","Csibész","Pici","Pipp","Inci");
 $q=$_POST["q"];
 if (strlen($q) > 0) {
 $hint="";
