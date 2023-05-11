@@ -1,9 +1,5 @@
-<?php
-$db_name='valami2';
 
-$db_pass='DnjeWf5)cejJnK92';
 
-?>
 
 
 
@@ -17,16 +13,16 @@ $db_pass='DnjeWf5)cejJnK92';
     <title>Document</title>
 </head>
 <body>
-    <header>
-    
-    </header>
+    <header>header</header>
     <nav>
-        <ul>
+       
+       <ul>
             <li>
                 <a href="index.php">Kezdőlap</a>
             </li>
+
             <li>
-                <a href="halak.php">Díszhalak</a>
+                <a href="halak.php" target="blank">Díszhalak</a>
             </li>
             <li>
                 <a href="kutyak.php">Kutyák</a>
@@ -37,35 +33,27 @@ $db_pass='DnjeWf5)cejJnK92';
             <li>
                 <a href="madarak.php">Madarak</a>
             </li>
+            <li>
+                <a href="">Rendelek</a>
+            </li>
+            <li>
+                <a href="login.php">Kilépek</a>
+            </li>
         </ul>
+       
     </nav>
     <aside>aside
         <section>section1</section>
         <section>section2</section>
     </aside>
-    <main id="halak">
-    
-    <?php 
-     $dbh = new PDO("mysql:host=localhost;dbname=$db_name", $db_name,$db_pass);
-     $result = $dbh->query("SELECT * FROM fish");
-     $halak = $result->fetchAll(PDO::FETCH_ASSOC);
-    ?>
-    <?php foreach( $halak as $key => $item ) { ?>
-                            <div>
-                            <img src="<?= $item['url'] ?>" alt="<?= $item['nev'] ?>"><br>
-                             <span><?= $item['nev'] ?></span>   <span><?= $item['ar'] ?> FT</span>
-                            </div>
-                        <?php } ?>
-
-   
-        
-           
-   
-
-    
-    
+    <main>
+    <h1>Díszhalat rendelek</h1>
+    <label for="">Írja be a hal nevét</label>
+    <input type="text"><br>
+     Javaslat:<span id="halnev"></span>
+  
     </main>
-    <footer>KIWI &copy</footer>
+    <footer>footer</footer>
 <?php ?>
 </body>
 </html>

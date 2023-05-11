@@ -1,9 +1,5 @@
-<?php
-$db_name='valami2';
 
-$db_pass='DnjeWf5)cejJnK92';
 
-?>
 
 
 
@@ -17,14 +13,14 @@ $db_pass='DnjeWf5)cejJnK92';
     <title>Document</title>
 </head>
 <body>
-    <header>
-    
-    </header>
+    <header>header</header>
     <nav>
-        <ul>
+       
+       <ul>
             <li>
                 <a href="index.php">Kezdőlap</a>
             </li>
+
             <li>
                 <a href="halak.php">Díszhalak</a>
             </li>
@@ -37,35 +33,24 @@ $db_pass='DnjeWf5)cejJnK92';
             <li>
                 <a href="madarak.php">Madarak</a>
             </li>
+            <li>
+                <a href="rendelek.php" target="_blank">Rendelek</a>
+            </li>
+            <li>
+                <a href="login.php">Kilépek</a>
+            </li>
         </ul>
+       
     </nav>
     <aside>aside
         <section>section1</section>
         <section>section2</section>
     </aside>
-    <main id="halak">
+    <main>
     
-    <?php 
-     $dbh = new PDO("mysql:host=localhost;dbname=$db_name", $db_name,$db_pass);
-     $result = $dbh->query("SELECT * FROM fish");
-     $halak = $result->fetchAll(PDO::FETCH_ASSOC);
-    ?>
-    <?php foreach( $halak as $key => $item ) { ?>
-                            <div>
-                            <img src="<?= $item['url'] ?>" alt="<?= $item['nev'] ?>"><br>
-                             <span><?= $item['nev'] ?></span>   <span><?= $item['ar'] ?> FT</span>
-                            </div>
-                        <?php } ?>
-
-   
-        
-           
-   
-
-    
-    
+  
     </main>
-    <footer>KIWI &copy</footer>
+    <footer>footer</footer>
 <?php ?>
 </body>
 </html>

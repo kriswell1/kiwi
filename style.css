@@ -40,6 +40,10 @@ header{
     width:100%;
     height:100px;
     background-image: linear-gradient(135deg,rgb(248, 107, 55),white);
+    background-image: url(./images/kiwi.png);
+    margin:0px;
+    padding:0px;
+    
     
 }
 
@@ -100,11 +104,14 @@ section{
     
     
 }
+
 footer{
     clear:both;
     background-color: goldenrod;
     height:100px;
     width:100%;
     background-image: linear-gradient(45deg,rgb(90, 8, 242),white);
+    text-align: center;
+    color:azure;
     
 }
